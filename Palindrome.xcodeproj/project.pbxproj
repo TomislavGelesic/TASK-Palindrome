@@ -1,0 +1,592 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 50;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		607EB5AD252B2F6000DB5808 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 607EB5AC252B2F6000DB5808 /* AppDelegate.swift */; };
+		607EB5AF252B2F6000DB5808 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 607EB5AE252B2F6000DB5808 /* SceneDelegate.swift */; };
+		607EB5B1252B2F6000DB5808 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 607EB5B0252B2F6000DB5808 /* ViewController.swift */; };
+		607EB5B4252B2F6000DB5808 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 607EB5B2252B2F6000DB5808 /* Main.storyboard */; };
+		607EB5B6252B2F6100DB5808 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 607EB5B5252B2F6100DB5808 /* Assets.xcassets */; };
+		607EB5B9252B2F6100DB5808 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 607EB5B7252B2F6100DB5808 /* LaunchScreen.storyboard */; };
+		607EB5C4252B2F6100DB5808 /* PalindromeTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 607EB5C3252B2F6100DB5808 /* PalindromeTests.swift */; };
+		607EB5CF252B2F6100DB5808 /* PalindromeUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 607EB5CE252B2F6100DB5808 /* PalindromeUITests.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		607EB5C0252B2F6100DB5808 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 607EB5A1252B2F6000DB5808 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 607EB5A8252B2F6000DB5808;
+			remoteInfo = Palindrome;
+		};
+		607EB5CB252B2F6100DB5808 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 607EB5A1252B2F6000DB5808 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 607EB5A8252B2F6000DB5808;
+			remoteInfo = Palindrome;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		607EB5A9252B2F6000DB5808 /* Palindrome.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Palindrome.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		607EB5AC252B2F6000DB5808 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		607EB5AE252B2F6000DB5808 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
+		607EB5B0252B2F6000DB5808 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		607EB5B3252B2F6000DB5808 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		607EB5B5252B2F6100DB5808 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		607EB5B8252B2F6100DB5808 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		607EB5BA252B2F6100DB5808 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		607EB5BF252B2F6100DB5808 /* PalindromeTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = PalindromeTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		607EB5C3252B2F6100DB5808 /* PalindromeTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PalindromeTests.swift; sourceTree = "<group>"; };
+		607EB5C5252B2F6100DB5808 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		607EB5CA252B2F6100DB5808 /* PalindromeUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = PalindromeUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		607EB5CE252B2F6100DB5808 /* PalindromeUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PalindromeUITests.swift; sourceTree = "<group>"; };
+		607EB5D0252B2F6100DB5808 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		607EB5A6252B2F6000DB5808 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		607EB5BC252B2F6100DB5808 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		607EB5C7252B2F6100DB5808 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		607EB5A0252B2F6000DB5808 = {
+			isa = PBXGroup;
+			children = (
+				607EB5AB252B2F6000DB5808 /* Palindrome */,
+				607EB5C2252B2F6100DB5808 /* PalindromeTests */,
+				607EB5CD252B2F6100DB5808 /* PalindromeUITests */,
+				607EB5AA252B2F6000DB5808 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		607EB5AA252B2F6000DB5808 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				607EB5A9252B2F6000DB5808 /* Palindrome.app */,
+				607EB5BF252B2F6100DB5808 /* PalindromeTests.xctest */,
+				607EB5CA252B2F6100DB5808 /* PalindromeUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		607EB5AB252B2F6000DB5808 /* Palindrome */ = {
+			isa = PBXGroup;
+			children = (
+				607EB5AC252B2F6000DB5808 /* AppDelegate.swift */,
+				607EB5AE252B2F6000DB5808 /* SceneDelegate.swift */,
+				607EB5B0252B2F6000DB5808 /* ViewController.swift */,
+				607EB5B2252B2F6000DB5808 /* Main.storyboard */,
+				607EB5B5252B2F6100DB5808 /* Assets.xcassets */,
+				607EB5B7252B2F6100DB5808 /* LaunchScreen.storyboard */,
+				607EB5BA252B2F6100DB5808 /* Info.plist */,
+			);
+			path = Palindrome;
+			sourceTree = "<group>";
+		};
+		607EB5C2252B2F6100DB5808 /* PalindromeTests */ = {
+			isa = PBXGroup;
+			children = (
+				607EB5C3252B2F6100DB5808 /* PalindromeTests.swift */,
+				607EB5C5252B2F6100DB5808 /* Info.plist */,
+			);
+			path = PalindromeTests;
+			sourceTree = "<group>";
+		};
+		607EB5CD252B2F6100DB5808 /* PalindromeUITests */ = {
+			isa = PBXGroup;
+			children = (
+				607EB5CE252B2F6100DB5808 /* PalindromeUITests.swift */,
+				607EB5D0252B2F6100DB5808 /* Info.plist */,
+			);
+			path = PalindromeUITests;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		607EB5A8252B2F6000DB5808 /* Palindrome */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 607EB5D3252B2F6100DB5808 /* Build configuration list for PBXNativeTarget "Palindrome" */;
+			buildPhases = (
+				607EB5A5252B2F6000DB5808 /* Sources */,
+				607EB5A6252B2F6000DB5808 /* Frameworks */,
+				607EB5A7252B2F6000DB5808 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = Palindrome;
+			productName = Palindrome;
+			productReference = 607EB5A9252B2F6000DB5808 /* Palindrome.app */;
+			productType = "com.apple.product-type.application";
+		};
+		607EB5BE252B2F6100DB5808 /* PalindromeTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 607EB5D6252B2F6100DB5808 /* Build configuration list for PBXNativeTarget "PalindromeTests" */;
+			buildPhases = (
+				607EB5BB252B2F6100DB5808 /* Sources */,
+				607EB5BC252B2F6100DB5808 /* Frameworks */,
+				607EB5BD252B2F6100DB5808 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				607EB5C1252B2F6100DB5808 /* PBXTargetDependency */,
+			);
+			name = PalindromeTests;
+			productName = PalindromeTests;
+			productReference = 607EB5BF252B2F6100DB5808 /* PalindromeTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		607EB5C9252B2F6100DB5808 /* PalindromeUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 607EB5D9252B2F6100DB5808 /* Build configuration list for PBXNativeTarget "PalindromeUITests" */;
+			buildPhases = (
+				607EB5C6252B2F6100DB5808 /* Sources */,
+				607EB5C7252B2F6100DB5808 /* Frameworks */,
+				607EB5C8252B2F6100DB5808 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				607EB5CC252B2F6100DB5808 /* PBXTargetDependency */,
+			);
+			name = PalindromeUITests;
+			productName = PalindromeUITests;
+			productReference = 607EB5CA252B2F6100DB5808 /* PalindromeUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		607EB5A1252B2F6000DB5808 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 1200;
+				LastUpgradeCheck = 1200;
+				TargetAttributes = {
+					607EB5A8252B2F6000DB5808 = {
+						CreatedOnToolsVersion = 12.0.1;
+					};
+					607EB5BE252B2F6100DB5808 = {
+						CreatedOnToolsVersion = 12.0.1;
+						TestTargetID = 607EB5A8252B2F6000DB5808;
+					};
+					607EB5C9252B2F6100DB5808 = {
+						CreatedOnToolsVersion = 12.0.1;
+						TestTargetID = 607EB5A8252B2F6000DB5808;
+					};
+				};
+			};
+			buildConfigurationList = 607EB5A4252B2F6000DB5808 /* Build configuration list for PBXProject "Palindrome" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 607EB5A0252B2F6000DB5808;
+			productRefGroup = 607EB5AA252B2F6000DB5808 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				607EB5A8252B2F6000DB5808 /* Palindrome */,
+				607EB5BE252B2F6100DB5808 /* PalindromeTests */,
+				607EB5C9252B2F6100DB5808 /* PalindromeUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		607EB5A7252B2F6000DB5808 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				607EB5B9252B2F6100DB5808 /* LaunchScreen.storyboard in Resources */,
+				607EB5B6252B2F6100DB5808 /* Assets.xcassets in Resources */,
+				607EB5B4252B2F6000DB5808 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		607EB5BD252B2F6100DB5808 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		607EB5C8252B2F6100DB5808 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		607EB5A5252B2F6000DB5808 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				607EB5B1252B2F6000DB5808 /* ViewController.swift in Sources */,
+				607EB5AD252B2F6000DB5808 /* AppDelegate.swift in Sources */,
+				607EB5AF252B2F6000DB5808 /* SceneDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		607EB5BB252B2F6100DB5808 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				607EB5C4252B2F6100DB5808 /* PalindromeTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		607EB5C6252B2F6100DB5808 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				607EB5CF252B2F6100DB5808 /* PalindromeUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		607EB5C1252B2F6100DB5808 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 607EB5A8252B2F6000DB5808 /* Palindrome */;
+			targetProxy = 607EB5C0252B2F6100DB5808 /* PBXContainerItemProxy */;
+		};
+		607EB5CC252B2F6100DB5808 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 607EB5A8252B2F6000DB5808 /* Palindrome */;
+			targetProxy = 607EB5CB252B2F6100DB5808 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		607EB5B2252B2F6000DB5808 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				607EB5B3252B2F6000DB5808 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		607EB5B7252B2F6100DB5808 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				607EB5B8252B2F6100DB5808 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		607EB5D1252B2F6100DB5808 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		607EB5D2252B2F6100DB5808 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		607EB5D4252B2F6100DB5808 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = Palindrome/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.example.Palindrome;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		607EB5D5252B2F6100DB5808 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = Palindrome/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.example.Palindrome;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		607EB5D7252B2F6100DB5808 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = PalindromeTests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.example.PalindromeTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Palindrome.app/Palindrome";
+			};
+			name = Debug;
+		};
+		607EB5D8252B2F6100DB5808 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = PalindromeTests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.example.PalindromeTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Palindrome.app/Palindrome";
+			};
+			name = Release;
+		};
+		607EB5DA252B2F6100DB5808 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = PalindromeUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.example.PalindromeUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = Palindrome;
+			};
+			name = Debug;
+		};
+		607EB5DB252B2F6100DB5808 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = PalindromeUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.example.PalindromeUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = Palindrome;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		607EB5A4252B2F6000DB5808 /* Build configuration list for PBXProject "Palindrome" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				607EB5D1252B2F6100DB5808 /* Debug */,
+				607EB5D2252B2F6100DB5808 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		607EB5D3252B2F6100DB5808 /* Build configuration list for PBXNativeTarget "Palindrome" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				607EB5D4252B2F6100DB5808 /* Debug */,
+				607EB5D5252B2F6100DB5808 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		607EB5D6252B2F6100DB5808 /* Build configuration list for PBXNativeTarget "PalindromeTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				607EB5D7252B2F6100DB5808 /* Debug */,
+				607EB5D8252B2F6100DB5808 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		607EB5D9252B2F6100DB5808 /* Build configuration list for PBXNativeTarget "PalindromeUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				607EB5DA252B2F6100DB5808 /* Debug */,
+				607EB5DB252B2F6100DB5808 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 607EB5A1252B2F6000DB5808 /* Project object */;
+}
