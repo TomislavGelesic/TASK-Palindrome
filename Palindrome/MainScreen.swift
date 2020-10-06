@@ -12,26 +12,11 @@ class MainScreen: UIViewController {
     //MARK: Properties
     var palindromeTextField = UITextField()
     let checkButton = UIButton()
-    /*
+    
     struct message {
         var normal:String? = ""
         var edited:String? = ""
-        
-        func toString() -> String {
-            if let s = self.normal, let e = self.edited {
-                var attributed = NSMutableAttributedString.init(string: e)
-                var ns = e as NSString
-                attributed.addAttribute(NSMutableAttributedString.Key.foregroundColor, value: UIColor.green, range: ns.range(of: e))
-                return s + "\n" + e
-            } else if let s = self.normal{
-                return s
-            } else if let e = self.edited{
-                return e
-            } else {
-                return ""
-            }
-        }
-    }*/
+    }
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -56,25 +41,20 @@ class MainScreen: UIViewController {
             
             
             if !isAlpha(txt: palindrom) || palindrom.isEmpty {
-                let alert = UIAlertController(title: "Incorrect!", message: "Entry was not valid word. Try to add a word which is a palindrome", preferredStyle: .alert)
-                alert.addAction(UIAlertAction(title: "Try again", style: .default, handler: nil))
-                self.present(alert, animated: true, completion: nil)
+                showAlert(title: "Incorrect!", message: "Entry was not a valid word. Try to add\n", messagePartToEdit: "a word which is a palindrome.", color: .black, bold: true , alertButtonTitle: "Try again")
             } else {
                 if isPalindrome(string: palindrom) {
+                    showAlert(title: "Correct!", message: "The entered word is a palindrome!\n", messagePartToEdit: "Do you know some other palindrome?", color: .green, bold: false, alertButtonTitle: "Enter new palindrome")
                     
-                    let alert = UIAlertController(title: "Correct!", message: "The entered word is a palindrome!", preferredStyle: .alert)
-                    alert.addAction(UIAlertAction(title: "Enter new palindrome", style: .default, handler: {action in self.palindromeTextField.text = ""}))
-                    
-                    self.present(alert, animated: true, completion: nil)
                 } else {
-                    let alert = UIAlertController(title: "Incorrect!", message: "The entered word is not a palindrome!", preferredStyle: .alert)
-                    alert.addAction(UIAlertAction(title: "Try again", style: .default, handler: {action in self.palindromeTextField.text = ""}))
-                    self.present(alert, animated: true, completion: nil)
+                    showAlert(title: "Incorrect!", message: "The entered word is not a palindrome!\n", messagePartToEdit: "Try different word.", color: .red, bold: false, alertButtonTitle: "Try again")
                 }
             }
         }
         palindromeTextField.text = ""
     }
+    
+    //MARK: Palindrome logic
     
     func isAlpha(txt: String) -> Bool {
         return CharacterSet.letters.isSuperset(of: CharacterSet(charactersIn: txt))
@@ -82,13 +62,37 @@ class MainScreen: UIViewController {
     
     func isPalindrome (string: String) -> Bool {
         if string == String(string.reversed()) {
-            
             return true
         } else {
             return false
         }
     }
     
+    func showAlert(title: String, message: String, messagePartToEdit: String, color: UIColor, bold: Bool, alertButtonTitle: String) {
+        
+        let attributedMessagePartToEdit: NSMutableAttributedString
+        let attributedMessage = NSMutableAttributedString(string: message)
+        let finalMessage = NSMutableAttributedString()
+        
+        if(bold){
+            attributedMessagePartToEdit = NSMutableAttributedString(string: messagePartToEdit, attributes: [NSAttributedString.Key.foregroundColor : color , NSAttributedString.Key.font : UIFont.boldSystemFont(ofSize: 18)])
+        }
+        else {
+            attributedMessagePartToEdit = NSMutableAttributedString(string: messagePartToEdit, attributes: [NSAttributedString.Key.foregroundColor : color])
+        }
+        
+        finalMessage.append(attributedMessage)
+        finalMessage.append(attributedMessagePartToEdit)
+        
+        let alert = UIAlertController(title: title, message: message, preferredStyle: .alert)
+        alert.setValue( finalMessage, forKey: "attributedMessage")
+        alert.addAction(UIAlertAction(title: alertButtonTitle, style: .cancel, handler: {(action) in self.palindromeTextField.text = ""}))
+        
+        self.present(alert, animated: true, completion: nil)
+    }
+    
+    
+    //MARK: Set ups
     func setupCheckButtonConstraints () {
         checkButton.translatesAutoresizingMaskIntoConstraints = false
         checkButton.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: 20).isActive = true
