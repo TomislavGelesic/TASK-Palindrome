@@ -12,8 +12,26 @@ class MainScreen: UIViewController {
     //MARK: Properties
     var palindromeTextField = UITextField()
     let checkButton = UIButton()
-    
-    
+    /*
+    struct message {
+        var normal:String? = ""
+        var edited:String? = ""
+        
+        func toString() -> String {
+            if let s = self.normal, let e = self.edited {
+                var attributed = NSMutableAttributedString.init(string: e)
+                var ns = e as NSString
+                attributed.addAttribute(NSMutableAttributedString.Key.foregroundColor, value: UIColor.green, range: ns.range(of: e))
+                return s + "\n" + e
+            } else if let s = self.normal{
+                return s
+            } else if let e = self.edited{
+                return e
+            } else {
+                return ""
+            }
+        }
+    }*/
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -36,14 +54,16 @@ class MainScreen: UIViewController {
     @objc func checkButtonTapped () {
         if let palindrom = palindromeTextField.text {
             
+            
             if !isAlpha(txt: palindrom) || palindrom.isEmpty {
                 let alert = UIAlertController(title: "Incorrect!", message: "Entry was not valid word. Try to add a word which is a palindrome", preferredStyle: .alert)
                 alert.addAction(UIAlertAction(title: "Try again", style: .default, handler: nil))
                 self.present(alert, animated: true, completion: nil)
             } else {
                 if isPalindrome(string: palindrom) {
+                    
                     let alert = UIAlertController(title: "Correct!", message: "The entered word is a palindrome!", preferredStyle: .alert)
-                    alert.addAction(UIAlertAction(title: "Enter new palindrome", style: .destructive, handler: {action in self.palindromeTextField.text = ""}))
+                    alert.addAction(UIAlertAction(title: "Enter new palindrome", style: .default, handler: {action in self.palindromeTextField.text = ""}))
                     
                     self.present(alert, animated: true, completion: nil)
                 } else {
