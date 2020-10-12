@@ -27,6 +27,56 @@ class MainScreen: UIViewController {
     
     
     
+    
+    
+    //MARK: Functions
+    
+    func isAlpha(txt: String) -> Bool {
+        return CharacterSet.letters.isSuperset(of: CharacterSet(charactersIn: txt))
+    }
+    
+    func isPalindrome (string: String) -> Bool {
+        if string == String(string.reversed()) {
+            return true
+        } else {
+            return false
+        }
+    }
+    
+    func showAlert(title: String, message: String, messagePartToEdit: String, color: UIColor, bold: Bool, alertButtonTitle: String) {
+        
+        let attributedMessagePartToEdit: NSMutableAttributedString
+        let attributedMessage = NSMutableAttributedString(string: message)			
+        let finalMessage = NSMutableAttributedString()
+        
+        if(bold){
+            attributedMessagePartToEdit = NSMutableAttributedString(string: messagePartToEdit, attributes: [NSAttributedString.Key.foregroundColor : color , NSAttributedString.Key.font : UIFont.boldSystemFont(ofSize: 18)])
+        }
+        else {
+            attributedMessagePartToEdit = NSMutableAttributedString(string: messagePartToEdit, attributes: [NSAttributedString.Key.foregroundColor : color])
+        }
+        
+        finalMessage.append(attributedMessage)
+        finalMessage.append(attributedMessagePartToEdit)
+        
+        let alert = UIAlertController(title: title, message: message, preferredStyle: .alert)
+        alert.setValue( finalMessage, forKey: "attributedMessage")
+        alert.addAction(UIAlertAction(title: alertButtonTitle, style: .cancel, handler: {(action) in self.palindromeTextField.text = ""}))
+        
+        self.present(alert, animated: true, completion: nil)
+    }
+    
+    
+    //MARK: Set ups    
+    func setupPalindormeTextField () {
+        palindromeTextField.placeholder = "Insert palindrome"
+        
+        palindromeTextField.setBottomBorder()
+        
+        view.addSubview(palindromeTextField)
+        setPalindromeTextFieldConstraints()
+    }
+    
     func setupCheckButton() {
         checkButton.backgroundColor = .blue
         checkButton.setTitle("CHECK", for: .normal)
@@ -53,63 +103,7 @@ class MainScreen: UIViewController {
         }
         palindromeTextField.text = ""
     }
-    
-    //MARK: Palindrome logic
-    
-    func isAlpha(txt: String) -> Bool {
-        return CharacterSet.letters.isSuperset(of: CharacterSet(charactersIn: txt))
-    }
-    
-    func isPalindrome (string: String) -> Bool {
-        if string == String(string.reversed()) {
-            return true
-        } else {
-            return false
-        }
-    }
-    
-    func showAlert(title: String, message: String, messagePartToEdit: String, color: UIColor, bold: Bool, alertButtonTitle: String) {
-        
-        let attributedMessagePartToEdit: NSMutableAttributedString
-        let attributedMessage = NSMutableAttributedString(string: message)
-        let finalMessage = NSMutableAttributedString()
-        
-        if(bold){
-            attributedMessagePartToEdit = NSMutableAttributedString(string: messagePartToEdit, attributes: [NSAttributedString.Key.foregroundColor : color , NSAttributedString.Key.font : UIFont.boldSystemFont(ofSize: 18)])
-        }
-        else {
-            attributedMessagePartToEdit = NSMutableAttributedString(string: messagePartToEdit, attributes: [NSAttributedString.Key.foregroundColor : color])
-        }
-        
-        finalMessage.append(attributedMessage)
-        finalMessage.append(attributedMessagePartToEdit)
-        
-        let alert = UIAlertController(title: title, message: message, preferredStyle: .alert)
-        alert.setValue( finalMessage, forKey: "attributedMessage")
-        alert.addAction(UIAlertAction(title: alertButtonTitle, style: .cancel, handler: {(action) in self.palindromeTextField.text = ""}))
-        
-        self.present(alert, animated: true, completion: nil)
-    }
-    
-    
-    //MARK: Set ups
-    func setupCheckButtonConstraints () {
-        checkButton.translatesAutoresizingMaskIntoConstraints = false
-        checkButton.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: 20).isActive = true
-        checkButton.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: -20).isActive = true
-        checkButton.heightAnchor.constraint(equalToConstant: 50).isActive = true
-        checkButton.topAnchor.constraint(equalTo: palindromeTextField.bottomAnchor, constant: 50).isActive = true
-    }
-    
-    func setupPalindormeTextField () {
-        palindromeTextField.placeholder = "Insert palindrome"
-        
-        palindromeTextField.setBottomBorder()
-        
-        view.addSubview(palindromeTextField)
-        setPalindromeTextFieldConstraints()
-    }
-    
+    //MARK: Constraints
     func setPalindromeTextFieldConstraints () {
         palindromeTextField.translatesAutoresizingMaskIntoConstraints = false
         palindromeTextField.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: 5).isActive = true
@@ -118,7 +112,13 @@ class MainScreen: UIViewController {
         palindromeTextField.topAnchor.constraint(equalTo: view.topAnchor, constant: 100).isActive = true
         
     }
-    
+    func setupCheckButtonConstraints () {
+        checkButton.translatesAutoresizingMaskIntoConstraints = false
+        checkButton.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: 20).isActive = true
+        checkButton.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: -20).isActive = true
+        checkButton.heightAnchor.constraint(equalToConstant: 50).isActive = true
+        checkButton.topAnchor.constraint(equalTo: palindromeTextField.bottomAnchor, constant: 50).isActive = true
+    }
     /*
      // MARK: - Navigation
      
